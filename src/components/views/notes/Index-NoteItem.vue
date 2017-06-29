@@ -1,5 +1,5 @@
 <style scoped>
-.task-item {
+.note-item {
 	border: 1px solid #009;
 	box-sizing: border-box;
 	height: 5em;
@@ -10,20 +10,20 @@
 </style>
 
 <template>
-	<router-link :to="url" class="task-item" routing-animation>
-		{{task.title}}
+	<router-link :to="url" class="note-item" routing-animation>
+		{{note.title}}
 	</router-link>
 </template>
 
 <script>
 module.exports = {
 	props: [
-		'task',
+		'note',
 	],
 
 	computed: {
 		url() {
-			return `/tasks/${this.task.id}`;
+			return `/notes/${this.note.id}`;
 		},
 	},
 };

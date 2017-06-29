@@ -1,6 +1,6 @@
 const Home = require('./components/views/misc/Home.vue');
-const TasksIndex = require('./components/views/tasks/Index.vue');
-const TasksShow = require('./components/views/tasks/Show.vue');
+const NotesIndex = require('./components/views/notes/Index.vue');
+const NotesShow = require('./components/views/notes/Show.vue');
 const Vue = require('vue');
 const VueRouter = require('vue-router');
 
@@ -9,7 +9,7 @@ Vue.use(VueRouter);
 module.exports = new VueRouter({
 	routes: [
 		{ path: '/', component: Home },
-		{ path: '/tasks/', component: TasksIndex },
-		{ path: '/tasks/:id', component: TasksShow },
+		{ path: '/notes/', component: NotesIndex },
+		{ path: '/notes/:id', component: NotesShow },
 	],
 });

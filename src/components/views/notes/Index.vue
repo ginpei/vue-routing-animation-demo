@@ -1,10 +1,10 @@
 <style scoped>
-.task-list {
+.note-list {
 	display: flex;
 	flex-wrap: wrap;
 }
 
-.task-item {
+.note-item {
 	border: 1px solid #009;
 	box-sizing: border-box;
 	height: 5em;
@@ -16,26 +16,26 @@
 
 <template>
 	<base-layout backTo="/">
-		<h1 routing-animation>Tasks</h1>
-		<div class="task-list">
-			<task-item v-for="d in tasks" :task="d"></task-item>
+		<h1 routing-animation>Notes</h1>
+		<div class="note-list">
+			<note-item v-for="d in notes" :note="d"></note-item>
 		</div>
 	</base-layout>
 </template>
 
 <script>
 const BaseLayout = require('../../layouts/BaseLayout.vue');
-const TaskItem = require('./Index-TaskItem.vue');
+const NoteItem = require('./Index-NoteItem.vue');
 
 module.exports = {
 	components: {
 		BaseLayout,
-		TaskItem,
+		NoteItem,
 	},
 
 	data() {
 		return {
-			tasks: this.$store.state.task.items,
+			notes: this.$store.state.note.items,
 		};
 	},
 };
