@@ -18,17 +18,17 @@ Animation itself is implemented in short CSS in [`routing-animation.css`](https:
 
 ```css
 [routing-animation] {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 [routing-animation].is-preparedRoutingAnimation {
-    animation: routingAnimation-show 300ms;
-    visibility: visible;
+  animation: routingAnimation-show 300ms;
+  visibility: visible;
 }
 
 @keyframes routingAnimation-show {
-    0%   { opacity: 0; transform: translateY(1rem); }
-    100% { opacity: 1; transform: translateY(0); }
+  0%   { opacity: 0; transform: translateY(1rem); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 ```
 
@@ -38,10 +38,10 @@ The class `is-preparedRoutingAnimation` is driven by [`BaseLayout.vue`](https://
 
 ```javascript
 mounted() {
-    const els = Array.from(this.$el.querySelectorAll('[routing-animation]'));
-    els.forEach((el, index)=>{
-        setTimeout(()=>el.classList.add('is-preparedRoutingAnimation'), 50 * index);
-    });
+  const els = Array.from(this.$el.querySelectorAll('[routing-animation]'));
+  els.forEach((el, index)=>{
+    setTimeout(()=>el.classList.add('is-preparedRoutingAnimation'), 50 * index);
+  });
 },
 ```
 
@@ -49,12 +49,12 @@ Here is an example of usage of `BaseLayout` and `routing-animation` from [`Home.
 
 ```html
 <template>
-    <base-layout>
-        <h1 routing-animation>Home</h1>
-        <ul>
-            <li routing-animation><router-link to="/notes/">Notes</router-link></li>
-            <li routing-animation><router-link to="/about">About</router-link></li>
-        </ul>
-    </base-layout>
+  <base-layout>
+    <h1 routing-animation>Home</h1>
+    <ul>
+      <li routing-animation><router-link to="/notes/">Notes</router-link></li>
+      <li routing-animation><router-link to="/about">About</router-link></li>
+    </ul>
+  </base-layout>
 </template>
 ```
