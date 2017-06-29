@@ -14,7 +14,7 @@ Inspired by a demo of ReactTransitionGroup:
 
 # Animating
 
-There is a wrapper component for all pages, which handles animation by; search target which has an attribute `routing-animation`, prepare a style sheet for the animation, then fire them.
+There is a wrapper component for all pages, which handles animation by; searches target which has an attribute `routing-animation`, prepares a style sheet for the animation, then fires them.
 
 [`src/components/layouts/BaseLayout.vue`](https://github.com/ginpei/vue-routing-animation-demo/blob/868d6139d5c2635452c6a4f19b5cf2bdd8ac3efb/src/components/layouts/BaseLayout.vue#L21-L26)
 
