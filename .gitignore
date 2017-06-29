@@ -3,4 +3,5 @@ npm-debug.log
 .DS_Store
 thumbs.db
 
+/gh-pages/
 /out/

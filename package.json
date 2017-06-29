@@ -1,6 +1,7 @@
 {
   "private": "true",
   "scripts": {
+    "build": "npm run lint -s && cp ./index.html ./routing-animation.css gh-pages/ && browserify -v -t vueify -e src/index.js -o gh-pages/out/main.js",
     "watch": "watchify -dv -t vueify -p browserify-hmr -e src/index.js -o out/main.js",
     "lint": "eslint --ext js,vue ./main.js src/**/*.vue",
     "postinstall": "mkdir out || true",
