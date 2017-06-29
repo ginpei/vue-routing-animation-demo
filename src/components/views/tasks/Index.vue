@@ -16,7 +16,7 @@
 
 <template>
 	<base-layout>
-		<h1>Tasks</h1>
+		<h1 routing-animation>Tasks</h1>
 		<div class="task-list">
 			<task-item v-for="d in tasks" :task="d"></task-item>
 		</div>

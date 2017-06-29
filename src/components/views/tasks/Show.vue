@@ -4,7 +4,7 @@
 <template>
 	<base-layout>
 		<template v-if="task">
-			<h1>{{task.title}}</h1>
+			<h1 routing-animation>{{task.title}}</h1>
 		</template>
 		<template v-else>
 			<div>Wow</div>

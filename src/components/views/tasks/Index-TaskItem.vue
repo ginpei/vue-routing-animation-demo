@@ -10,7 +10,7 @@
 </style>
 
 <template>
-	<router-link :to="url" class="task-item">
+	<router-link :to="url" class="task-item" routing-animation>
 		{{task.title}}
 	</router-link>
 </template>

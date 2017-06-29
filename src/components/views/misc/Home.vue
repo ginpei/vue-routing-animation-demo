@@ -1,8 +1,8 @@
 <template>
 	<base-layout>
-		<h1>Home</h1>
+		<h1 routing-animation>Home</h1>
 		<ul>
-			<li><router-link to="/tasks/">Tasks</router-link></li>
+			<li routing-animation><router-link to="/tasks/">Tasks</router-link></li>
 		</ul>
 	</base-layout>
 </template>
