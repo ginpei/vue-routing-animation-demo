@@ -2,7 +2,7 @@
 </style>
 
 <template>
-	<base-layout>
+	<base-layout backTo="/tasks/">
 		<template v-if="task">
 			<h1 routing-animation>{{task.title}}</h1>
 		</template>

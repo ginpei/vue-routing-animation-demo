@@ -4,7 +4,7 @@
 <template>
 	<div class="wrapper">
 		<div class="menu">
-			<router-link to="/">Home</router-link>
+			<router-link v-if="backTo" :to="backTo">←</router-link>
 		</div>
 		<div class="content">
 			<slot></slot>
@@ -14,6 +14,10 @@
 
 <script>
 module.exports = {
+	props: [
+		'backTo',
+	],
+
 	mounted() {
 		const els = Array.from(this.$el.querySelectorAll('[routing-animation]'));
 		els.forEach((el, index)=>{
