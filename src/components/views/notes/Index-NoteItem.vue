@@ -1,11 +1,13 @@
 <style scoped>
 .note-item {
-	border: 1px solid #009;
+	border-style: solid;
+	border-width: 1px;
 	box-sizing: border-box;
 	height: 5em;
-	margin: 1em;
+	margin: 0.5em;
+	overflow: auto;
 	padding: 1em;
-	width: calc(100% / 3 - 2em);
+	width: calc(100% / 3 - 1em);
 }
 </style>
 
